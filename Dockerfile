@@ -9,6 +9,8 @@ RUN apt update && apt -y upgrade \
 
 FROM debian:bullseye-slim
 
+EXPOSE 8888
+
 RUN apt -y update && apt -y upgrade \
     && apt -y install shadowsocks-libev
 
