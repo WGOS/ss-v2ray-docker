@@ -4,7 +4,7 @@ WORKDIR /v2ray-plugin
 
 RUN apt update && apt -y upgrade \
     && apt -y install git \
-    && git clone https://github.com/shadowsocks/v2ray-plugin.git . \
+    && git clone --branch v1.3.1 https://github.com/shadowsocks/v2ray-plugin.git . \
     && go build
 
 FROM debian:bullseye-slim
