@@ -1,0 +1,15 @@
+{
+    "server": ["0.0.0.0"],
+    "server_port": 8888,
+    "password": "{PAAAASWORD}",
+    "timeout": 300,
+    "method": "xchacha20-ietf-poly1305",
+    "no_delay": true,
+    "fast_open": true,
+    "reuse_port": true,
+    "workers": 1,
+    "plugin": "v2ray-plugin",
+    "nameserver": "127.0.0.1",
+    "plugin_opts": "server;tls;fast-open;path=/v2ray;host=domain.me;cert=/tls/cert;key=/tls/key;loglevel=none",
+    "mode": "tcp_and_udp"
+}

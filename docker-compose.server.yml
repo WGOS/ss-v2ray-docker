@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  ss-server:
+    build: '.'
+    volumes:
+      - './data/config/server.json:/server.json:ro'
+      - './data/tls:/tls:ro'
+    command: 'ss-server -c /server.json'

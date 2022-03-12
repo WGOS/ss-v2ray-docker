@@ -1,8 +1,9 @@
-FROM golang:alpine AS v2ray-build
+FROM golang:bullseye AS v2ray-build
 
 WORKDIR /v2ray-plugin
 
-RUN apk add git \
+RUN apt update && apt -y upgrade \
+    && apt -y install git \
     && git clone https://github.com/shadowsocks/v2ray-plugin.git . \
     && go build
 
